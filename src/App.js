@@ -1,9 +1,11 @@
 import logo from "./logo.svg"
 import "./App.css"
+import CharacterCreator from "./CharacterCreator";
 
 function App() {
   return (
     <div className="bg-purple-500">
+      <CharacterCreator />
       <header className="bg-blue-500">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
