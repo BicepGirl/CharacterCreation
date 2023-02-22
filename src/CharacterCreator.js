@@ -4,7 +4,7 @@ function CharacterCreator() {
     return(
         <section>
             <div>
-                <div>
+                <div className=''>
                     <img src={logo} alt={'bullshit'}/>
                 </div>
 
