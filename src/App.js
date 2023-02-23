@@ -1,13 +1,9 @@
-import CharacterCreator from "./components/characterCreator/CharacterCreator";
-
+import Landing from "./Components/Landing"
 
 function App() {
   return (
-    <div className=" bg-amber-500 h-screen" >
-
-        <CharacterCreator/>
-
-
+    <div>
+      <Landing></Landing>
     </div>
   )
 }
