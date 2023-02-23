@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { ChromePicker } from "react-color"
 
 const CharacterBackgound = () => {
-  const [color, setColor] = useState("#ff0000")
+  const [color, setColor] = useState("#808080")
   const [show, setShow] = useState(true)
 
   return (
