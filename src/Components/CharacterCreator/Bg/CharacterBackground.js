@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { ChromePicker } from "react-color"
+import CharacterField from "../character/CharacterField"
 
 const CharacterBackground = () => {
   const [color, setColor] = useState("#808080")
@@ -9,7 +10,7 @@ const CharacterBackground = () => {
     <div className=" p-10">
       <div className="">
         {show && (
-          <div className=" mb-10">
+          <div className=" mb-10 absolute bottom-0">
             <ChromePicker
               disableAlpha={true}
               disableHsl={false}
@@ -29,7 +30,11 @@ const CharacterBackground = () => {
         </button>
 
         <div style={{ backgroundColor: color }}>
-          <div className="width-[300px] h-[700px] "></div>
+          <div className="width-[300px] h-[700px] ">
+            <div className="scale-50">
+              <CharacterField></CharacterField>
+            </div>
+          </div>
         </div>
       </div>
     </div>

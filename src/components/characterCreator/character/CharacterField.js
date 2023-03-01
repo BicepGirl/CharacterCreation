@@ -10,7 +10,7 @@ import ShoesTwoComponent from "./assets/bodyOne/components/shoes/ShoesTwo"
 
 function CharacterField() {
   return (
-    <div>
+    <div className="pointer-events-none ">
       <div className=" absolute inset-0 ">
         <BgHairOneComponent></BgHairOneComponent>
       </div>
