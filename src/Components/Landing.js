@@ -7,6 +7,6 @@ const Landing = () => {
       <CharacterBackground />
     </div>
   )
-main
+
 }
 export default Landing
