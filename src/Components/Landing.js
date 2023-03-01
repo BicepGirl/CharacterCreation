@@ -1,6 +1,11 @@
-import CharacterBackgound from "./CharacterCreator/Bg/CharacterBackground"
+
+import CharacterBackground from "./characterCreator/Bg/CharacterBackground";
 
 const Landing = () => {
-  return <CharacterBackgound />
+  return (
+
+      <CharacterBackground />
+
+  );
 }
 export default Landing

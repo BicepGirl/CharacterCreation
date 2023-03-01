@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { ChromePicker } from "react-color"
 
-const CharacterBackgound = () => {
+const CharacterBackground = () => {
   const [color, setColor] = useState("#808080")
   const [show, setShow] = useState(true)
 
@@ -36,4 +36,4 @@ const CharacterBackgound = () => {
   )
 }
 
-export default CharacterBackgound
+export default CharacterBackground
