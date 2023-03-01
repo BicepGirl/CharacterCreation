@@ -3,9 +3,8 @@ import CharacterCreator from "./components/characterCreator/CharacterCreator"
 
 function App() {
   return (
-    <div className="container w-1/2">
+    <div className="">
       <Landing></Landing>
-      <CharacterCreator></CharacterCreator>
     </div>
   )
 }
