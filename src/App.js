@@ -1,5 +1,7 @@
+
 import Landing from "./components/Landing"
 import CharacterCreator from "./components/characterCreator/CharacterCreator"
+main
 
 function App() {
   return (

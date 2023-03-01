@@ -1,3 +1,4 @@
+
 import CharacterBackground from "./characterCreator/Bg/CharacterBackground"
 
 const Landing = () => {
@@ -6,5 +7,6 @@ const Landing = () => {
       <CharacterBackground />
     </div>
   )
+main
 }
 export default Landing
