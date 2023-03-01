@@ -1,9 +1,12 @@
-import Landing from "./Components/Landing"
+import Landing from "./components/Landing";
+import CharacterCreator from "./components/characterCreator/CharacterCreator";
+
 
 function App() {
   return (
-    <div>
+    <div className="container w-1/2">
       <Landing></Landing>
+      <CharacterCreator></CharacterCreator>
     </div>
   )
 }

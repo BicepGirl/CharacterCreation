@@ -1,6 +1,12 @@
-import CharacterBackgound from "./CharacterCreator/Bg/CharacterBackground"
+
+import CharacterBackground from "./characterCreator/Bg/CharacterBackground";
 
 const Landing = () => {
-  return <CharacterBackgound />
+  return (
+    <div className="">
+      <CharacterBackground />
+      <div className=""></div>
+    </div>
+  )
 }
 export default Landing
