@@ -1,11 +1,10 @@
-import CharacterBackgound from "./CharacterCreator/Bg/CharacterBackground"
 
-import CharacterCreator from "./CharacterCreator/CharacterCreator"
+import CharacterBackground from "./characterCreator/Bg/CharacterBackground";
 
 const Landing = () => {
   return (
     <div className="">
-      <CharacterBackgound />
+      <CharacterBackground />
       <div className=""></div>
     </div>
   )
