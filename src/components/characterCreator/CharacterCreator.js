@@ -1,14 +1,9 @@
 //kommer anropa characterField och bg
 
-
-
-
-import CharacterField from "./character/CharacterField";
+import CharacterField from "./character/CharacterField"
 
 function CharacterCreator() {
-    return (
-     <CharacterField/>
-    )
+  return <CharacterField />
 }
 
 export default CharacterCreator

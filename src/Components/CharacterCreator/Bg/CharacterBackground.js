@@ -3,7 +3,7 @@ import { ChromePicker } from "react-color"
 
 const CharacterBackgound = () => {
   const [color, setColor] = useState("#808080")
-  const [show, setShow] = useState(true)
+  const [show, setShow] = useState(false)
 
   return (
     <div className=" p-10">
