@@ -1,6 +1,5 @@
-import Landing from "./components/Landing";
-import CharacterCreator from "./components/characterCreator/CharacterCreator";
-
+import Landing from "./components/Landing"
+import CharacterCreator from "./components/characterCreator/CharacterCreator"
 
 function App() {
   return (
