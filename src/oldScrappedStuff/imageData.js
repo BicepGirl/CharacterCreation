@@ -1,4 +1,4 @@
-import FaceOne from "./characterCreator/character/assets/bodyOne/components/face/FaceOne";
+import FaceOne from "../components/characterCreator/character/assets/bodyOne/components/face/FaceOne";
 
 export default [
     {

@@ -1,6 +1,5 @@
 import * as React from 'react';
 import {useEffect, useState} from 'react';
-import svgCollectionSwitcher from "./functions/svgCollectionSwitch";
 import TabPanel from "./Tabs/function/TabPanel";
 import Tab from "./Tabs/function/Tab";
 import {svgStateData} from "./data/svgStateData";
@@ -12,46 +11,24 @@ import FacialHair from "./Tabs/FacialHair";
 import UpperBody from "./Tabs/UpperBody";
 import LowerBody from "./Tabs/LowerBody";
 import Shoes from "./Tabs/Shoes";
+import BodyOne from "./Tabs/BodyOne";
 
-
-const svgComponentLoader = svgCollectionSwitcher('bgHair');
 const Sidebar = ({
                    character,
                    setCharacter,
                    tempCompSelected,
                    setTempCompSelected
                  }) => {
-  // const [color, setColor] = useState("#808080")
   const [tabValue, setTabValue] = useState(null);
   const [tempColor, setTempColor] = useState(null);
 
   useEffect(() => {
-    console.log('tempCompSelected:', tempCompSelected);
-    console.log('color3: ', tempColor)
-  }, [tempCompSelected, tempColor]);
 
+  }, [tabValue,tempCompSelected])
 
-  // ---Endless loop---GJ
-  // setCharacter((prevState) => (
-  //     {
-  //       ...prevState, 'bgHair': tempCompSelected
-  //     }))
-  // const val =  tempCompSelected ? tempCompSelected : tempColor;
-
-  //     setTempCompSelected((prevState) => (
-  //         {
-  //           ...prevState,
-  //           [type]: val
-  //         }))
-
-  useEffect(() => {
-    console.log('tabValue:', tabValue);
-  }, [tabValue])
-
-  //Front page showState true
+  //Sidebar start page(load) choosing character parts = Tab
   return (
       <div className="bg-[#2F2F2F] h-[calc(100vh-64px)] relative">
-
         <div className=" ">
           <p className=" mt-4 ml-4 text-white">Customized Character</p>
           <div className="grid grid-cols-4 ">
@@ -62,7 +39,7 @@ const Sidebar = ({
                   setTabValue(value)
                 }}>
                   {/*{insert icon component here instead of img}*/}
-                  {/*{need to change svgStateData also to give icon name from the icon folder}*/}
+                  {/*{need to change svgStateData(change collection) also to give icon name from the icon folder}*/}
                   {img}
                 </Tab>
               </div>
@@ -74,6 +51,15 @@ const Sidebar = ({
           {/*  Character*/}
           {/*</button>*/}
         </div>
+{/*//TODO fix with map to get less repeatable code*/}
+{/*        every TabPanel are linked to it's own tab through value and selected*/}
+
+        <TabPanel value={'bodyOne'} selected={tabValue}>
+          <BodyOne setTabValue={setTabValue} tabValue={tabValue} setCharacter={setCharacter}
+                   setTempCompSelected={setTempCompSelected} setTempColor={setTempColor}
+                   tempColor={tempColor}
+                   character={character} tempCompSelected={tempCompSelected}/>
+        </TabPanel>
 
         <TabPanel value={'bgHair'} selected={tabValue}>
           <BgHair setTabValue={setTabValue} tabValue={tabValue} setCharacter={setCharacter}
@@ -81,7 +67,6 @@ const Sidebar = ({
                   tempColor={tempColor}
                   character={character} tempCompSelected={tempCompSelected}/>
         </TabPanel>
-
 
         <TabPanel value={'frontHair'} selected={tabValue}>
           <FrontHair setTabValue={setTabValue} tabValue={tabValue} setCharacter={setCharacter}

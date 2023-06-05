@@ -3,10 +3,9 @@ import {useEffect, useState} from "react";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
 import CharacterBackground from "./characterCreator/Bg/CharacterBackground";
-
-
 const Landing = () => {
   const [character, setCharacter] = useState({
+    bodyOne: '',
     bgHair: '',
     frontHair: '',
     face: '',
@@ -19,7 +18,7 @@ const Landing = () => {
   const [tempCompSelected, setTempCompSelected] = useState(null);
 
   useEffect(() => {
-    console.log('character:', character);
+    // console.log('character:', character);
   }, [character]);
 
   return (
@@ -35,7 +34,6 @@ const Landing = () => {
           />
           <CharacterBackground character={character}/>
         </div>
-        {/*<ShowCase setCharacter={setCharacter}/>*/}
       </>
 
   )

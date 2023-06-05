@@ -1,8 +1,8 @@
 import {svgJsonCollection} from "../data/svgData";
 import {svgComponentsCollection} from "../data/newSvgData";
-import BgHair from "../Tabs/BgHair";
-import BgHairOne from "../characterCreator/character/assets/bodyOne/components/hair/bgHair/BgHairOne";
-import BgHairTwo from "../characterCreator/character/assets/bodyOne/components/hair/bgHair/BgHairTwo";
+import BgHair from "../../components/Tabs/BgHair";
+import BgHairOne from "../../components/characterCreator/character/assets/bodyOne/components/hair/bgHair/BgHairOne";
+import BgHairTwo from "../../components/characterCreator/character/assets/bodyOne/components/hair/bgHair/BgHairTwo";
 
 function svgCollectionSwitcher2(stringValue,props) {
   switch (stringValue) {

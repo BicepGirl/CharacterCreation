@@ -1,6 +1,12 @@
 import * as IonIcons from "react-icons/io5";
 import * as React from "react";
+import {IoAdd} from "react-icons/io5";
 export const svgStateData = [
+  {
+    value: "bodyOne",
+    img:<IonIcons.IoAdd color="silver "/>,
+    collection:"bodyOne",
+  },
   {
     value: "bgHair",
     img:<IonIcons.IoColorPalette color="silver "/>,

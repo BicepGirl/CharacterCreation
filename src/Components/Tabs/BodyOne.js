@@ -1,22 +1,21 @@
-// If showState false it will load users choice of customize button
 import * as React from "react";
 import {useState} from "react";
 import {ChromePicker} from "react-color";
 import * as IonIcons from "react-icons/io5";
 import svgComponentData from "../functions/svgCollectionDataArray";
-const UpperBody = ({
-                      tabValue,
-                      setTabValue,
-                      setCharacter,
-                      setTempCompSelected,
-                      setTempColor,
-                      tempColor,
-                      character,
-                      tempCompSelected
-                    }) => {
+const BodyOne = ({
+                  tabValue,
+                  setTabValue,
+                  setCharacter,
+                  setTempCompSelected,
+                  setTempColor,
+                  tempColor,
+                  character,
+                  tempCompSelected
+                }) => {
 
   const [isTrue, setIsTrue] = useState(true)
-  const [color, setColor] = useState("#808080")
+  const [color, setColor] = useState("#DCCFCF")
   const characterCustomizationOptions = (val, type) => {
     //
     if (isTrue === true) {
@@ -62,7 +61,7 @@ const UpperBody = ({
             <button className="absolute " onClick={() => characterCustomizationOptions('', tabValue)}>
               <IonIcons.IoBanOutline color="silver "/></button>
           </div>
-          {svgComponentData(color).upperBody.map((val, index, color) => {
+          {svgComponentData(color).bodyOne.map((val, index, color) => {
             // console.log('colorComp: ', val.fill)
             return (
                 // <div className="rounded-lg h-10 w-10 relative p-3 m-4 bg-[#606060] ">
@@ -94,4 +93,4 @@ const UpperBody = ({
       </div>
   )
 }
-export default UpperBody;
+export default BodyOne;

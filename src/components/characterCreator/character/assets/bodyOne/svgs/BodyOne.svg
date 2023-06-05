@@ -3,7 +3,7 @@
     <defs>
         <style>
             .cls-100s, .cls-200s {
-            fill: #701b4d;
+            fill: #current;
             }
 
             .cls-2s {
