@@ -58,9 +58,11 @@ const Sidebar = ({
             {svgStateData.map(({img, value, collection}, index) => {
 
               return <div className='flex rounded-lg h-10 w-10 bg-[#606060] m-4 justify-center align-middle'>
-                <Tab value={value} onClick={(e) => {
+                <Tab value={value} onClick={() => {
                   setTabValue(value)
                 }}>
+                  {/*{insert icon component here instead of img}*/}
+                  {/*{need to change svgStateData also to give icon name from the icon folder}*/}
                   {img}
                 </Tab>
               </div>
@@ -73,9 +75,10 @@ const Sidebar = ({
           {/*</button>*/}
         </div>
 
-        <TabPanel value={'bgHair'} selected={tabValue} tempColor={tempColor}>
+        <TabPanel value={'bgHair'} selected={tabValue}>
           <BgHair setTabValue={setTabValue} tabValue={tabValue} setCharacter={setCharacter}
                   setTempCompSelected={setTempCompSelected} setTempColor={setTempColor}
+                  tempColor={tempColor}
                   character={character} tempCompSelected={tempCompSelected}/>
         </TabPanel>
 
@@ -83,26 +86,45 @@ const Sidebar = ({
         <TabPanel value={'frontHair'} selected={tabValue}>
           <FrontHair setTabValue={setTabValue} tabValue={tabValue} setCharacter={setCharacter}
                      setTempCompSelected={setTempCompSelected} setTempColor={setTempColor}
+                     tempColor={tempColor}
                      character={character} tempCompSelected={tempCompSelected}/>
         </TabPanel>
 
         <TabPanel value={'face'} selected={tabValue}>
-          <Face setTabValue={setTabValue} tabValue={tabValue} setCharacter={setCharacter}/>
+          <Face setTabValue={setTabValue} tabValue={tabValue} setCharacter={setCharacter}
+                setTempCompSelected={setTempCompSelected} setTempColor={setTempColor}
+                tempColor={tempColor}
+                character={character} tempCompSelected={tempCompSelected}/>
         </TabPanel>
         <TabPanel value={'ears'} selected={tabValue}>
-          <Ears setTabValue={setTabValue} tabValue={tabValue} setCharacter={setCharacter}/>
+          <Ears setTabValue={setTabValue} tabValue={tabValue} setCharacter={setCharacter}
+                setTempCompSelected={setTempCompSelected} setTempColor={setTempColor}
+                tempColor={tempColor}
+                character={character} tempCompSelected={tempCompSelected}/>
         </TabPanel>
         <TabPanel value={'facialHair'} selected={tabValue}>
-          <FacialHair setTabValue={setTabValue} tabValue={tabValue} setCharacter={setCharacter}/>
+          <FacialHair setTabValue={setTabValue} tabValue={tabValue} setCharacter={setCharacter}
+                      setTempCompSelected={setTempCompSelected} setTempColor={setTempColor}
+                      tempColor={tempColor}
+                      character={character} tempCompSelected={tempCompSelected}/>
         </TabPanel>
         <TabPanel value={'upperBody'} selected={tabValue}>
-          <UpperBody setTabValue={setTabValue} tabValue={tabValue} setCharacter={setCharacter}/>
+          <UpperBody setTabValue={setTabValue} tabValue={tabValue} setCharacter={setCharacter}
+                     setTempCompSelected={setTempCompSelected} setTempColor={setTempColor}
+                     tempColor={tempColor}
+                     character={character} tempCompSelected={tempCompSelected}/>
         </TabPanel>
         <TabPanel value={'lowerBody'} selected={tabValue}>
-          <LowerBody setTabValue={setTabValue} tabValue={tabValue} setCharacter={setCharacter}/>
+          <LowerBody setTabValue={setTabValue} tabValue={tabValue} setCharacter={setCharacter}
+                     setTempCompSelected={setTempCompSelected} setTempColor={setTempColor}
+                     tempColor={tempColor}
+                     character={character} tempCompSelected={tempCompSelected}/>
         </TabPanel>
         <TabPanel value={'shoes'} selected={tabValue}>
-          <Shoes setTabValue={setTabValue} tabValue={tabValue} setCharacter={setCharacter}/>
+          <Shoes setTabValue={setTabValue} tabValue={tabValue} setCharacter={setCharacter}
+                 setTempCompSelected={setTempCompSelected} setTempColor={setTempColor}
+                 tempColor={tempColor}
+                 character={character} tempCompSelected={tempCompSelected}/>
         </TabPanel>
       </div>
   );

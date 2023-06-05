@@ -1,10 +1,10 @@
 import React from 'react';
 import {ReactComponent as FacialHairOne} from '../../svgs/facialHair/FacialHairOne.svg';
 
-const FacialHairOneComponent = () => {
+const FacialHairOneComponent = (props) => {
     return (
         <div className="">
-            <FacialHairOne />
+            <FacialHairOne fill={props.fill}/>
         </div>
     );
 }

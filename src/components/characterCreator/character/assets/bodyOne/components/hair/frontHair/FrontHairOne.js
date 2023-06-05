@@ -1,10 +1,10 @@
 import React from 'react';
 import {ReactComponent as FontHairOne} from '../../../svgs/hair/frontHair/FrontHairOne.svg';
 
-const FrontHairOneComponent = () => {
+const FrontHairOneComponent = (props) => {
     return (
         <div className="">
-            <FontHairOne />
+            <FontHairOne fill={props.fill} />
         </div>
     );
 }
