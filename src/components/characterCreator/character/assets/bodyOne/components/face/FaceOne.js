@@ -4,7 +4,7 @@ import {ReactComponent as FaceOne} from '../../svgs/face/FaceOne.svg';
 const FaceOneComponent = () => {
     return (
         <div className="">
-            <FaceOne />
+            <FaceOne  />
         </div>
     );
 }

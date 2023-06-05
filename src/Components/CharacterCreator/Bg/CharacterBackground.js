@@ -5,8 +5,8 @@ import { saveAs } from "file-saver"
 
 import CharacterField from "../character/CharacterField"
 
-const CharacterBackground = () => {
-  const [color, setColor] = useState("#808080")
+const CharacterBackground = ({ character }) => {
+  const [color, setColor] = useState("#000000")
   const [show, setShow] = useState(false)
   const divRef = useRef(null)
 
@@ -19,10 +19,10 @@ const CharacterBackground = () => {
   }
 
   return (
-    <div className=" p-10">
-      <div className="">
+    <div>
+      <div className="w-full">
         {show && (
-          <div className=" mb-10 absolute bottom-0">
+          <div className="mb-10 absolute bottom-0">
             <ChromePicker
               disableAlpha={true}
               disableHsl={false}
@@ -33,28 +33,31 @@ const CharacterBackground = () => {
             />
           </div>
         )}
-        <button
-          className=" bg-slate-300 outline outline-1 m-2 italic tracking-widest uppercase rounded-xl hover:bg-slate-500 p-2"
-          type="button"
-          onClick={() => setShow(!show)}
-        >
-          Change background color
-        </button>
 
         <div ref={divRef} style={{ backgroundColor: color }}>
           <div className="width-[300px] h-[700px] ">
-            <div className="scale-50">
-              <CharacterField></CharacterField>
+            <div className="scale-[70%]  ">
+              <CharacterField character={character}></CharacterField>
             </div>
           </div>
+          <div style={{ backgroundColor: color }} className="h-full">
+            <button
+              className=" bg-slate-300 outline outline-1 m-2 italic tracking-widest uppercase rounded-xl hover:bg-slate-500 p-2 text-white"
+              type="button"
+              onClick={() => setShow(!show)}
+            >
+              Change background color
+            </button>
+          </div>
+
+          <button
+            className="bg-slate-300 outline outline-1 m-2 italic tracking-widest uppercase rounded-xl hover:bg-slate-500 p-2"
+            type="button"
+            onClick={handleSaveImage}
+          >
+            Save Character
+          </button>
         </div>
-        <button
-          className="bg-slate-300 outline outline-1 m-2 italic tracking-widest uppercase rounded-xl hover:bg-slate-500 p-2"
-          type="button"
-          onClick={handleSaveImage}
-        >
-          Save Character
-        </button>
       </div>
     </div>
   )

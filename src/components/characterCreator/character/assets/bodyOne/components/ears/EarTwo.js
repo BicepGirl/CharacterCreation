@@ -1,10 +1,10 @@
 import React from 'react';
 import {ReactComponent as EarTwo} from '../../svgs/ears/EarTwo.svg';
 
-const EarTwoComponent = () => {
+const EarTwoComponent = (props) => {
     return (
         <div className="">
-            <EarTwo />
+            <EarTwo fill={props.fill}/>
         </div>
     );
 }
