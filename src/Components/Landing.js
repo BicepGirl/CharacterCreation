@@ -6,7 +6,7 @@ import CharacterBackground from "./characterCreator/Bg/CharacterBackground";
 const Landing = () => {
   const [character, setCharacter] = useState({
     bodyOne: '',
-    bgHair: '',
+    backHair: '',
     frontHair: '',
     face: '',
     ears: '',

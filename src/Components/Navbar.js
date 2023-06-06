@@ -1,6 +1,4 @@
-import ShowCaseTabs from "../oldScrappedStuff/tabComponents/ShowCaseTabs";
 import * as React from "react";
-const navBarHeight = "h-16";
 
 const Navbar = () => {
 

@@ -6,7 +6,7 @@ function CharacterField({character}) {
   return (
       <div className="pointer-events-none">
         <div className=" absolute inset-0 ">
-          {character.bgHair}
+          {character.backHair}
         </div>
         <div className=" absolute inset-0">
               {character.bodyOne ? character.bodyOne :  <BodyOneComponent fill={'#701b4d'} />}

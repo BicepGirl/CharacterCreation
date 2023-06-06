@@ -1,5 +1,5 @@
-import BgHairTwo from "../characterCreator/character/assets/bodyOne/components/hair/bgHair/BgHairTwo";
-import BgHairOne from "../characterCreator/character/assets/bodyOne/components/hair/bgHair/BgHairOne";
+import BgHairTwo from "../characterCreator/character/assets/bodyOne/components/hair/backHair/BackHairTwo";
+import BgHairOne from "../characterCreator/character/assets/bodyOne/components/hair/backHair/BackHairOne";
 import FrontHairOne from "../characterCreator/character/assets/bodyOne/components/hair/frontHair/FrontHairOne";
 import FrontHairTwo from "../characterCreator/character/assets/bodyOne/components/hair/frontHair/FrontHairTwo";
 import FaceOne from "../characterCreator/character/assets/bodyOne/components/face/FaceOne";
@@ -20,7 +20,7 @@ const svgComponentData = (props) => {
   return {
     'bodyOne': [<BodyOne fill={props}/>,
     ],
-    'bgHair': [<BgHairTwo fill={props}/>,
+    'backHair': [<BgHairTwo fill={props}/>,
       <BgHairOne fill={props}/>,
     ],
     'frontHair': [<FrontHairOne fill={props}/>,

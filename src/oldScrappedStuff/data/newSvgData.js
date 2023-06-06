@@ -1,5 +1,5 @@
-import BgHairOne from "../../components/characterCreator/character/assets/bodyOne/components/hair/bgHair/BgHairOne";
-import BgHairTwo from "../../components/characterCreator/character/assets/bodyOne/components/hair/bgHair/BgHairTwo";
+import BgHairOne from "../../components/characterCreator/character/assets/bodyOne/components/hair/backHair/BackHairOne";
+import BgHairTwo from "../../components/characterCreator/character/assets/bodyOne/components/hair/backHair/BackHairTwo";
 import FrontHairOne from "../../components/characterCreator/character/assets/bodyOne/components/hair/frontHair/FrontHairOne";
 import FrontHairTwo from "../../components/characterCreator/character/assets/bodyOne/components/hair/frontHair/FrontHairTwo";
 import EarOne from "../../components/characterCreator/character/assets/bodyOne/components/ears/EarOne";

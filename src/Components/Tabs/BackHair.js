@@ -3,7 +3,7 @@ import {useState} from "react";
 import {ChromePicker} from "react-color";
 import * as IonIcons from "react-icons/io5";
 import svgComponentData from "../functions/svgCollectionDataArray";
-const BgHair = ({
+const BackHair = ({
                   tabValue,
                   setTabValue,
                   setCharacter,
@@ -61,7 +61,7 @@ const BgHair = ({
             <button className="absolute " onClick={() => characterCustomizationOptions('', tabValue)}>
               <IonIcons.IoBanOutline color="silver "/></button>
           </div>
-          {svgComponentData(color).bgHair.map((val, index, color) => {
+          {svgComponentData(color).backHair.map((val, index, color) => {
             // console.log('colorComp: ', val.fill)
             return (
                 // <div className="rounded-lg h-10 w-10 relative p-3 m-4 bg-[#606060] ">
@@ -93,4 +93,4 @@ const BgHair = ({
       </div>
   )
 }
-export default BgHair;
+export default BackHair;

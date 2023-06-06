@@ -3,7 +3,7 @@ import {useEffect, useState} from 'react';
 import TabPanel from "./Tabs/function/TabPanel";
 import Tab from "./Tabs/function/Tab";
 import {svgStateData} from "./data/svgStateData";
-import BgHair from "./Tabs/BgHair";
+import BackHair from "./Tabs/BackHair";
 import FrontHair from "./Tabs/FrontHair";
 import Face from "./Tabs/Face";
 import Ears from "./Tabs/Ears";
@@ -12,6 +12,7 @@ import UpperBody from "./Tabs/UpperBody";
 import LowerBody from "./Tabs/LowerBody";
 import Shoes from "./Tabs/Shoes";
 import BodyOne from "./Tabs/BodyOne";
+import IconPack from "./data/IconPack";
 
 const Sidebar = ({
                    character,
@@ -38,14 +39,11 @@ const Sidebar = ({
                 <Tab value={value} onClick={() => {
                   setTabValue(value)
                 }}>
-                  {/*{insert icon component here instead of img}*/}
-                  {/*{need to change svgStateData(change collection) also to give icon name from the icon folder}*/}
-                  {img}
+                  {<IconPack icons={collection}/>}
                 </Tab>
               </div>
             })
             }
-
           </div>
           {/*<button className="rounded-lg bg-orange-600 p-2 pl-11 pr-11 text-white bottom-0 absolute m-4 ">Save*/}
           {/*  Character*/}
@@ -61,11 +59,11 @@ const Sidebar = ({
                    character={character} tempCompSelected={tempCompSelected}/>
         </TabPanel>
 
-        <TabPanel value={'bgHair'} selected={tabValue}>
-          <BgHair setTabValue={setTabValue} tabValue={tabValue} setCharacter={setCharacter}
-                  setTempCompSelected={setTempCompSelected} setTempColor={setTempColor}
-                  tempColor={tempColor}
-                  character={character} tempCompSelected={tempCompSelected}/>
+        <TabPanel value={'backHair'} selected={tabValue}>
+          <BackHair setTabValue={setTabValue} tabValue={tabValue} setCharacter={setCharacter}
+                    setTempCompSelected={setTempCompSelected} setTempColor={setTempColor}
+                    tempColor={tempColor}
+                    character={character} tempCompSelected={tempCompSelected}/>
         </TabPanel>
 
         <TabPanel value={'frontHair'} selected={tabValue}>
