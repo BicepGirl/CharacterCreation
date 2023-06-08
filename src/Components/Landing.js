@@ -17,6 +17,7 @@ const Landing = () => {
   })
   const [tempCompSelected, setTempCompSelected] = useState(null)
   const [refState, setRefState] = useState(null)
+  const [colorBG, setColorBG] = useState("#000000")
   useEffect(() => {
     // console.log('character:', character);
   }, [character, refState])
@@ -31,8 +32,14 @@ const Landing = () => {
           tempCompSelected={tempCompSelected}
           setTempCompSelected={setTempCompSelected}
           refState={refState}
+          setColorBG={setColorBG}
+          colorBG={colorBG}
         />
-        <CharacterBackground character={character} setRefState={setRefState} />
+        <CharacterBackground
+          character={character}
+          setRefState={setRefState}
+          colorBG={colorBG}
+        />
       </div>
     </>
   )

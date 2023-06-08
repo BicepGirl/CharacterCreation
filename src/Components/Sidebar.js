@@ -13,7 +13,8 @@ import LowerBody from "./Tabs/LowerBody"
 import Shoes from "./Tabs/Shoes"
 import BodyOne from "./Tabs/BodyOne"
 import IconPack from "./data/IconPack"
-import handleSaveImage from "./CharacterCreator/Bg/HandleSaveImage"
+import HandleSaveImage from "./CharacterCreator/Bg/HandleSaveImage"
+import { ChromePicker } from "react-color"
 
 const Sidebar = ({
   character,
@@ -21,9 +22,12 @@ const Sidebar = ({
   tempCompSelected,
   setTempCompSelected,
   refState,
+  colorBG,
+  setColorBG,
 }) => {
   const [tabValue, setTabValue] = useState(null)
   const [tempColor, setTempColor] = useState(null)
+  const [show, setShow] = useState(false)
 
   useEffect(() => {}, [tabValue, tempCompSelected])
   // console.log('sidebarRef: ',refState)
@@ -48,10 +52,33 @@ const Sidebar = ({
             )
           })}
         </div>
+
+        <div className="">
+          {show && (
+            <div className="mb-10 absolute bottom-0">
+              <ChromePicker
+                disableAlpha={true}
+                disableHsl={false}
+                color={colorBG}
+                onChangeComplete={(colorBG) => {
+                  setColorBG(colorBG.hex)
+                }}
+              />
+            </div>
+          )}
+          <button
+            className=" rounded-lg bg-orange-600 p-2 pl-11 pr-11 text-white bottom-0 absolute m-4 "
+            type="button"
+            onClick={() => setShow(!show)}
+          >
+            Change background color
+          </button>
+        </div>
+
         <button
           type="button"
           className="rounded-lg bg-orange-600 p-2 pl-11 pr-11 text-white bottom-0 absolute m-4 "
-          onClick={() => handleSaveImage(refState)}
+          onClick={() => HandleSaveImage(refState)}
         >
           Save Character
         </button>
