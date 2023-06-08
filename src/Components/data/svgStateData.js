@@ -2,40 +2,40 @@ import * as React from "react";
 export const svgStateData = [
   {
     value: "bodyOne",
-    collection:"BodyOne",
+    IconFileName:"BodyOne",
   },
   {
     value: "backHair",
-    collection:"BackHair",
+    IconFileName:"BackHair",
   },
   {
     value: "frontHair",
-    collection:"FrontHair",
+    IconFileName:"FrontHair",
   },
   {
     value: "face",
-    collection:"Face",
+    IconFileName:"Face",
   },
   {
     value: "ears",
-    collection:"Ear",
+    IconFileName:"Ear",
   },
   {
     value: "facialHair",
-    collection:"FacialHair",
+    IconFileName:"FacialHair",
   },
 
   {
     value: "upperBody",
-    collection:"UpperBody",
+    IconFileName:"UpperBody",
   },
   {
     value: "lowerBody",
-    collection:"LowerBody",
+    IconFileName:"LowerBody",
   },
   {
     value: "shoes",
-    collection:"Shoes",
+    IconFileName:"Shoes",
   },
 ];
 
