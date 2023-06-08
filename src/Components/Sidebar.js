@@ -36,10 +36,10 @@ const Sidebar = ({
     <div className="bg-[#2F2F2F] h-[calc(100vh-64px)] relative">
       <div className=" ">
         <p className=" mt-4 ml-4 text-white">Customized Character</p>
-        <div className="grid grid-cols-4 ">
+        <div className="grid grid-cols-4 place-items-center">
           {svgStateData.map(({ value, IconFileName }, index) => {
             return (
-              <div className="flex rounded-lg h-10 w-10 bg-[#606060] m-4 justify-center align-middle">
+              <div className="flex rounded-lg h-10 w-10 bg-[#606060] m-4">
                 <Tab
                   value={value}
                   onClick={() => {
