@@ -1,10 +1,10 @@
 import React from 'react';
 import {ReactComponent as LowerBodyTwo} from '../../svgs/lowerBody/LowerBodyTwo.svg';
 
-const LowerBodyTwoComponent = () => {
+const LowerBodyTwoComponent = (props) => {
     return (
         <div className="">
-            <LowerBodyTwo />
+            <LowerBodyTwo fill={props.fill} />
         </div>
     );
 }

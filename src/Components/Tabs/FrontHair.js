@@ -1,29 +1,28 @@
 // If showState false it will load users choice of customize button
 import * as React from "react";
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import {ChromePicker} from "react-color";
 import * as IonIcons from "react-icons/io5";
-import {svgComponentsCollection} from "../data/newSvgData";
+import svgComponentData from "../functions/svgCollectionDataArray";
+const FrontHair = ({
+                  tabValue,
+                  setTabValue,
+                  setCharacter,
+                  setTempCompSelected,
+                  setTempColor,
+                  tempColor,
+                  character,
+                  tempCompSelected
+                }) => {
 
-
-const FrontHair = ({tabValue, setTabValue, setCharacter, setTempCompSelected, setTempColor, character,tempCompSelected}) => {
-  const [color, setColor] = useState("#808080")
-  // const [icon, setIcon] = useState("")
   const [isTrue, setIsTrue] = useState(true)
-
+  const [color, setColor] = useState("#808080")
   const characterCustomizationOptions = (val, type) => {
-
-
+    //
     if (isTrue === true) {
       setTempCompSelected(character)
     }
-    //   setTempCompSelected((prevState) => (
-    //       {
-    //         ...prevState,
-    //         [type]: val
-    //       }))
-    // }
-
+    //
     {
       setCharacter((prevState) => (
           {
@@ -33,25 +32,23 @@ const FrontHair = ({tabValue, setTabValue, setCharacter, setTempCompSelected, se
     }
     setIsTrue(false)
   }
-
   const characterCustomizationOptionsBackButton = (tempCompSelected) => {
-
-    console.log('Character: ',tempCompSelected)
+    // Change back to your prev character choice
     if (isTrue === false) {
       setCharacter((prevState) => (
-          {...prevState,
+          {
+            ...prevState,
             ...tempCompSelected
           }))
-      // const previousValue = useRef(prevState);
     }
-
     setTabValue('')
   }
+  //Applying the choice user make and s
   const isApplyButton = (e) => {
-
+    // setColor(color)
     setIsTrue(true)
+    setTabValue('')
   }
-
   return (
       <div className="">
         <div className="grid grid-cols-2">
@@ -61,27 +58,23 @@ const FrontHair = ({tabValue, setTabValue, setCharacter, setTempCompSelected, se
             {`< Back`} </button>
         </div>
         <div className="grid grid-cols-4 ">
-
           <div className="rounded-lg h-10 w-10 relative p-3  m-4 bg-[#606060] ">
             <button className="absolute " onClick={() => characterCustomizationOptions('', tabValue)}>
               <IonIcons.IoBanOutline color="silver "/></button>
-
           </div>
-          {svgComponentsCollection.frontHair.map((val, index) => {
-            // console.log('dd: ' ,val)
-            // console.log('ee: ' ,tabValue)
+          {svgComponentData(color).frontHair.map((val, index, color) => {
+            // console.log('colorComp: ', val.fill)
             return (
-                //   <div className="rounded-lg h-10 w-10 relative p-3 m-4 bg-[#606060] ">
-                <button onClick={() => characterCustomizationOptions(val, tabValue,color)} key={index}>
+                // <div className="rounded-lg h-10 w-10 relative p-3 m-4 bg-[#606060] ">
+                <button
+                    onClick={() => characterCustomizationOptions(val, tabValue)} key={index}>
                   {val}
                 </button>
-                //     </div>
+                // </div>
             )
           })}
-
         </div>
         <p className=" mt-4 ml-4 text-white">Colour Picker</p>
-
         <div className="m-4 ">
           <ChromePicker
               width={200}
@@ -92,13 +85,12 @@ const FrontHair = ({tabValue, setTabValue, setCharacter, setTempCompSelected, se
                 setColor(color.hex)
               }}
           />
-
         </div>
-
+        <div className="m-4 p-2">
+        </div>
         <button className="rounded-lg bg-orange-600 m-4 p-2 pl-20 pr-20 text-white bottom-0 absolute"
                 onClick={(e) => isApplyButton(e)} key={'applyButton'}>Apply
         </button>
-
       </div>
   )
 }

@@ -1,46 +1,41 @@
-import * as IonIcons from "react-icons/io5";
 import * as React from "react";
 export const svgStateData = [
   {
-    value: "bgHair",
-    img:<IonIcons.IoColorPalette color="silver "/>,
-    collection:"bgHair",
+    value: "bodyOne",
+    IconFileName:"BodyOne",
+  },
+  {
+    value: "backHair",
+    IconFileName:"BackHair",
   },
   {
     value: "frontHair",
-    img:<IonIcons.IoAccessibilitySharp color="silver "/>,
-    collection:"frontHair",
+    IconFileName:"FrontHair",
   },
   {
     value: "face",
-    img:<IonIcons.IoAddCircleOutline color="silver "/>,
-    collection:"face",
+    IconFileName:"Face",
   },
   {
     value: "ears",
-    img:<IonIcons.IoAirplane color="silver "/>,
-    collection:"ears",
+    IconFileName:"Ear",
   },
   {
     value: "facialHair",
-    img:<IonIcons.IoAlarmSharp color="silver "/>,
-    collection:"facialHair",
+    IconFileName:"FacialHair",
   },
 
   {
     value: "upperBody",
-    img:<IonIcons.IoAttachOutline color="silver "/>,
-    collection:"upperBody",
+    IconFileName:"UpperBody",
   },
   {
     value: "lowerBody",
-    img:<IonIcons.IoBarbellOutline color="silver "/>,
-    collection:"lowerBody",
+    IconFileName:"LowerBody",
   },
   {
     value: "shoes",
-    img:<IonIcons.IoBeerOutline color="silver "/>,
-    collection:"shoes",
+    IconFileName:"Shoes",
   },
 ];
 

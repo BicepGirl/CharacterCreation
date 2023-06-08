@@ -1,20 +1,5 @@
 
-// const Tab = ({children}) =>  {
-//   return (
-//       <button children={children}>
-//
-//       </button>
-//   );
-//
-// };
-//
-// <Tab >
-//   <span>benny</span>
-// </Tab>
-
-
-
-const Tab = ({children, className, onClick, selected, value}) => {
+const Tab = ({children, onClick, selected, value}) => {
 
       return (
           <button
