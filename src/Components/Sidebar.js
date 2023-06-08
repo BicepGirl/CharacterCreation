@@ -55,7 +55,7 @@ const Sidebar = ({
 
         <div className="">
           {show && (
-            <div className="mb-10 absolute bottom-0">
+            <div className=" p-3 absolute bottom-0">
               <ChromePicker
                 disableAlpha={true}
                 disableHsl={false}
@@ -68,9 +68,9 @@ const Sidebar = ({
           )}
 
           {/* Detta bör vara egna komponenter. */}
-          <div className="grid grid-rows-2 gap-5">
+          <div className="grid grid-rows-2 gap-2 ">
             <button
-              className=" rounded-lg bg-orange-600 p-2 pl-11 pr-11 text-white  m-4  "
+              className=" rounded-lg bg-orange-600 p-2  text-white  m-4 hover:bg-gray-600 active:bg-gray-400"
               type="button"
               onClick={() => setShow(!show)}
             >
@@ -78,7 +78,7 @@ const Sidebar = ({
             </button>
             <button
               type="button"
-              className="rounded-lg bg-orange-600 p-2 pl-11 pr-11 text-white  m-4 "
+              className="rounded-lg bg-orange-600 p-2  text-white  m-4 hover:bg-gray-600 active:bg-gray-400 "
               onClick={() => HandleSaveImage(refState)}
             >
               Save Character
