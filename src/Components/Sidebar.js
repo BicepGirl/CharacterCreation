@@ -39,7 +39,7 @@ const Sidebar = ({
         <div className="grid grid-cols-4 place-items-center">
           {svgStateData.map(({ value, IconFileName }, index) => {
             return (
-              <div className="flex rounded-lg h-10 w-10 bg-[#606060] m-4">
+              <div className="flex rounded-lg h-10 w-10 bg-gray-400 outline hover:bg-blue-200 outline-blue-400 invert m-4">
                 <Tab
                   value={value}
                   onClick={() => {
