@@ -66,22 +66,25 @@ const Sidebar = ({
               />
             </div>
           )}
-          <button
-            className=" rounded-lg bg-orange-600 p-2 pl-11 pr-11 text-white bottom-0 absolute m-4 "
-            type="button"
-            onClick={() => setShow(!show)}
-          >
-            Change background color
-          </button>
-        </div>
 
-        <button
-          type="button"
-          className="rounded-lg bg-orange-600 p-2 pl-11 pr-11 text-white bottom-0 absolute m-4 "
-          onClick={() => HandleSaveImage(refState)}
-        >
-          Save Character
-        </button>
+          {/* Detta bör vara egna komponenter. */}
+          <div className="grid grid-rows-2 gap-5">
+            <button
+              className=" rounded-lg bg-orange-600 p-2 pl-11 pr-11 text-white  m-4  "
+              type="button"
+              onClick={() => setShow(!show)}
+            >
+              Change background color
+            </button>
+            <button
+              type="button"
+              className="rounded-lg bg-orange-600 p-2 pl-11 pr-11 text-white  m-4 "
+              onClick={() => HandleSaveImage(refState)}
+            >
+              Save Character
+            </button>
+          </div>
+        </div>
       </div>
       {/*//TODO fix with map to get less repeatable code*/}
       {/*        every TabPanel are linked to it's own tab through value and selected*/}
